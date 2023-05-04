@@ -634,6 +634,11 @@ content: "";
 }
 .footer-widget h3{
     position: relative;
+    transition: all 0.3s ease;
+}
+.footer-widget h3:hover{
+    letter-spacing: 2px;
+    color: #0d6efd;
 }
 .footer-widget h3::before{
     content: '';
