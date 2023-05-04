@@ -193,6 +193,9 @@ img{
     top: 60px;
     left: 0;
 }
+.cardtext{
+    color: #111;
+}
 .services-icon i{}
 .cardhover{}
 .cardhover:hover{
@@ -200,6 +203,9 @@ img{
     color: #fff;
     border-radius: 4px;
     transition: all 0.5s ease;
+}
+.cardhover:hover .cardtext{
+    color: #fff;
 }
 .cardhover:hover .services-icon{
     background: #fff;
@@ -249,9 +255,17 @@ img{
 	line-height: 80px;
 	border-radius: 50%;
     position: relative;
+    transition: all 0.3s ease;
+}
+.video-content .vicons:hover{
+    background: #5252f0;
+    transition: all 0.3s ease;  
+}
+.video-content .vicons:hover i{
+    color: #fff;
 }
 .video-content .vicons i{
-    color: #5252f0;
+    color: #5252f0;    
 }
 .video-content .vicons::before{
 content: "";
