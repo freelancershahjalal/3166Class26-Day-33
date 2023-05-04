@@ -1,517 +1,724 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>3166Class26 Assignment Day-33 part-1,2,3,4,5,6</title>
+/* Default CSS Link Start */
 
-    <!-- line icon -->
-    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+body,h1,h2,h3,h4,h5,h6,p,span{
+    font-family: 'League Spartan', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+.default-btn{
+    margin-left: 100px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: #fff;    
+    color: #1919cd;
+    border: #1919cd;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+.default-btn:hover{
+    color: #fff;
+}
+.default-btn::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #1919cd;     
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    z-index: -1;
+    transition: all 0.5s ease;   
+}
+.default-btn:hover::after{
+    width: 100%;    
+}
 
-    <!-- Font Awesome Link -->
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+/* Default CSS Link End */
+
+/* Menu Section Styling Start */
+.mani-menu{
+    background: #e7e6e6;    
+}
+.nav-item{
+    position: relative;
+    margin-left: 10px;   
+}
+.nav-item a.active{
+    color: #1919cd !important;
+}
+.nav-item a:hover{
+    color: #1919cd !important;
+}
+.nav-item::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #1919cd;
+    top: 145%;
+    left: 0;
+    transition: all 0.5s ease;    
+}
+.nav-item:hover::after{
+    width: 100%;    
+}
+.nav-item.active1::after{
+    width: 100%;
+}
+
+/* Dropdown Menu Styling Start */
+.nav-item{
+    position: relative;
+}
+.nav-item ul{
+    position: absolute;
+    width: 200px;
+    background: #fff;
+    top: 150%;
+    left: 0;
+    padding: 15px 20px;    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.nav-item:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-item ul li {	
+    list-style: none;
+}
+.nav-item ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #1919cd;    
+    padding: 10px 20px;
+}
+.nav-item ul li a:hover{
+    color: #fff !important;
+}
+/* Dropdown Menu Styling End */
+/* Menu Section Styling End */
+
+/* Hero/Banner Section Styling Start */
+.hero{
+    background: #edf6ff;
+}
+.hero .hero-content{
+    padding: 100px 0px;   
+}
+.hero .hero-content h2 {
+	font-size: 50px;
+}
+.hero .hero-content p{
+	padding: 30px 0px;
+	line-height: 30px;
+	text-align: justify;
+}
+.hero .hero-content a.default-btn{
+    margin-left: 0;
+    text-decoration: none;
+    padding: 15px 20px;
+    background: #0d6efd;    
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.hero .hero-content a.default-btn:hover{
+    color: #0d6efd;
+    background: #fff;
     
-    <!-- Font Awesome cdnjs link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+}
+.hero .hero-content a.default-btn::after{
+    background: #fff;   
+}
+.hero-img{}
+.hero-img img {
+	border-radius: 400px 0px 500px 500px;
+	margin-left: 154px;
+	height: 517px;
+}
+/* Hero/Banner Section Styling End */
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+/* Services Section Styling Start */
+.services-content{}
+.services-content h6{
+    color: #9d8fec;
+    text-transform: uppercase;
+}
+.services-content h1{
+    position: relative;
+    font-size: 39px;
+}
+.services-content p{}
 
-    <!-- Bootstrap Version 5.3.0 Link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+.services-content h1::after{
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 3px;
+    background: #9d8fec;
+    left: 0;
+    top: 110%;
+}
+
+.services-img {
+	position: absolute;
+	top: 45px;
+	left: -55px;
+	z-index: -1;
+}
+.services-icon {
+	width: 50px;
+	height: 50px;
+	background: #5252f0;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 30px 30px 30px 0px;
+	margin: 20px 0px;
+	font-size: 26px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.services-icon::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #9d8fec;
+    top: 60px;
+    left: 0;
+}
+.cardtext{
+    color: #111;
+}
+.services-icon i{}
+.cardhover{}
+.cardhover:hover{
+    background: #5252f0;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.5s ease;
+}
+.cardhover:hover .cardtext{
+    color: #fff;
+}
+.cardhover:hover .services-icon{
+    background: #fff;
+    color: #5252f0;
+}
+.cardhover:hover .services-icon::after{
+    background: #fff;
+}
+/* Services Section Styling End */
+
+
+/* Video Section Styling Start */
+.video{
+    background-image: linear-gradient(rgba(15, 15, 79, 0.659), rgba(15, 15, 79, 0.659)), url(img/video-bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 100px 0px;
+}
+.video-content{
+    color: #fff;  
+}
+.video-content h5{
+    text-transform: uppercase;
+}
+.video-content h2{
+    position: relative;
+}
+.video-content h2::after {
+	content: '';
+	position: absolute;
+	width: 15%;
+	height: 2px;
+	background: #fff;
+	top: 50px;
+	left: 260px;
+}
+.video-content p{
+    line-height: 30px;
+}
+.video-content .vicons{
+    margin: 40px 0px;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	background: #fff;
+	line-height: 80px;
+	border-radius: 50%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.video-content .vicons:hover{
+    background: #5252f0;
+    transition: all 0.3s ease;  
+}
+.video-content .vicons:hover i{
+    color: #fff;
+}
+.video-content .vicons i{
+    color: #5252f0;    
+}
+.video-content .vicons::before{
+content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    animation: playbtn 1.6s ease-out infinite;
+}
+.video-content .vicons::after{
+content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    animation: playbtn 1.6s ease-out infinite;
+}
+@keyframes playbtn{
+    0%, 30%{
+        transform: scale(0);
+        opacity: 1;
+    }   
+    50%{
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+/* Video Section Styling End */
+
+/* Pricing Table Section Styling Start */
+.pricing-table{
+    background: #f6f9fc;
+}
+.pricing-title {
+    width: 400px;
+    margin: auto;
+}
+.pricing-title h5{
+    color: #1919cd;
+    text-transform: uppercase;
+}
+.pricing-title h2{
+    font-weight: 600;
+    position: relative;
+}
+.pricing-title h2::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background: #1919cd;
+    bottom: -10px;
+    left: 153px;
+}
+.pricing-title p {
+    padding: 30px 0px;
+}
+.pricing-table-items {
+    padding: 30px 100px;
+    background: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+/* .pricing-table-items:hover{
+    background: #0d6efd;
+    color: #fff;
+} */
+.pricing-table-items h5 {
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+.pricing-table-items h3 {
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 100px;
+    margin: 30px;
+    border-bottom: 2px solid rgb(221, 221, 221);
+    transition: all 0.5s ease 0s;
+    position: relative;
+}
+.pricing-table-items h6 {
+    position: absolute;
+    top: 160px;
+    left: 165px;
+    font-size: 18px;
+    font-weight: 600;    
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.pricing-table-items:hover h6{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.pricing-table-items ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.pricing-table-items ul li{}
+.pricing-table-items .pricing-item-button{}
+.pricing-table-items .pricing-item-button a{
+    display: inline-block;
+    background: #0d6efd;    
+    color: #fff;
+    border-radius: 30px;
+    border: none;    
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.pricing-table-items .pricing-item-button a:hover{
+    color: #0d6efd;
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+}
+.pricing-table-items .pricing-item-button a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #fff;    
+    border-radius: 30px;    
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.pricing-table-items .pricing-item-button a:hover::after{
+    width: 100%;    
+}
+.pricing-table-items:hover{
+    background: #0d6efd;
+    color: #fff;
+}
+.pricing-table-items:hover .pricing-item-button a{
+    background: #fff;
+    color: #0d6efd ;
+}
+.pricing-table-items:hover .pricing-item-button a::after{
+    background: #0d6efd;
+}
+.pricing-table-items .pricing-item-button a:hover{
+    color: #fff;
+}
+
+/* Pricing Table Section Styling End */
+
+
+/* Purchase Section Styling Start */
+.purchase{
+    width: 100%;
+    background-image: linear-gradient(rgba(13,110,253, 0.8), rgba(13,110,253, 0.8)), url(img/free-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 150px 0px; 
+    text-align: center; 
+    color: #fff;
+}
+.purchase-content{
+    width: 500px;
+    margin: auto;
+}
+.purchase-content h6{
+    text-transform: uppercase;
+}
+.purchase-content h2{
+    font-size: 35px;
+    font-weight: 600;
+    padding: 20px 0px;
+    position: relative;
+}
+.purchase-content h2::after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    top: 115px;
+    left: 220px;
+}
+.purchase-content p{
+    padding: 10px;
+}
+.purchase-content .purchase-content-button a {
+    display: inline-block;
+    background: #fff;
+    color: #0d6efd;
+    border-radius: 30px;
+    font-weight: 600;    
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+.purchase-content .purchase-content-button a:hover{
+    color: #fff;
+}
+.purchase-content .purchase-content-button a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #0d6efd;    
+    color: #fff;
+    border-radius: 30px;    
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+.purchase-content .purchase-content-button a:hover::after{
+    width: 100%;
+}
+/* News Letter Section Styling Start */
+.newsletter-content{
+    color: #fff;
+    background: #3763eb;
+}
+.newsletter-content h3{}
+.newsletter-content p{}
+.newsletter-content form{}
+.newsletter-content input {
+    width: 350px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+}
+.card-title {
+    font-size: 30px;   
+    padding-bottom: 50px;
+}
+.newsletterbtn {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 10px 40px;
+    margin-left: 25px;
+    color: #fff;
+}
+.newsletterbtn:hover{
+    background: #3763eb;
+    border: 1px solid #fff;
+}
+.newsletterbtn-2 {
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+.newsletter-content btn{}
+/* News Letter Section Styling End */
+
+/* Our Testimonial Section Start */
+.ourtestimonial{
+    padding-top: 100px;
+}
+.clients-testimonial-left{}
+.clients-testimonial-left h5 {
+    color: #3763eb;
+}
+.clients-testimonial-left h2 {
+    font-size: 45px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.clients-testimonial-left h2::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    background: #0d6efd;
+    bottom: 22px;
+    left: 0;
+}
+.clients-testimonial-left p {
+    line-height: 30px;
+    text-align: justify;
+}
+.clients-testimonial-right{}
+.clients-brand{}
+.clients-brand table{}
+.clients-brand table tbody{}
+.clients-brand table tbody tr{}
+.clients-brand table tbody tr td {
+    border: 1px solid #ddd;
+    width: 285px;
+    height: 150px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.clients-brand table tbody tr td:hover{
+    background: #dfefff;
+}
+.clients-brand table tbody tr td img{}
+/* Our Testimonial Section End */
+
+/* Blog Section Styling Start */
+.blog-title{}
+.blog-title h5{
+    color: #0d6efd;
+    text-transform: uppercase;
+}
+.blog-title h2 {
+    font-size: 44px;
+    font-weight: 500;
+    position: relative;
+}
+.blog-title h2::after {
+    content: '';
+    position: absolute;
+    width: 5%;
+    height: 2px;
+    background: #0d6efd;
+    bottom: -15px;
+    left: 47%;
+}
+.blog-title p {
+    width: 500px;
+    margin: auto;
+    line-height: 30px;
+    padding: 30px 0px;
+    color: #ada8b6;
+}
+.blog-card{
+    border: none;
+    position: relative;
+}
+.card-content{
+    padding: 0;
+}
+.card-body .card-title{}
+.card-body .card-text {
+    color: #ada8b6;
+}
+.pop-up {
+    width: 220px;
+    height: 60px;
+    background: rgb(13, 110, 253);
+    border-radius: 30px;
+    padding: 5px;
+    position: absolute;
+    top: 195px;
+    left: 180px;
+}
+.pop-up img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+.pop-up span {
+    color: #fff;
+    text-transform: uppercase;
+}
+/* Blog Section Styling End */
+
+/* Footer Section Styling Start */
+.footer {
+    padding: 70px 0px;
+    background: #081828;
+    color: #fff;    
+}
+.footer-widget{
     
-    <!-- Main CSS Link  -->
-    <link rel="stylesheet" href="style.css">
-    
+}
+.footer-widget img {
+    width: 120px;
+}
+.footer-widget h3{
+    position: relative;
+    transition: all 0.3s ease;
+}
+.footer-widget h3:hover{
+    letter-spacing: 2px;
+    color: #0d6efd;
+}
+.footer-widget h3::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #0d6efd;
+    top: 0;
+    left: -15px;
+}
+.footer-widget p{
+    padding: 20px 0px;
+    line-height: 30px;
+    color: #ada8b6;
+}
+.footer-widget-social{}
+.footer-widget-social ul {
+    padding: 0;
+    list-style: none;   
+}
+.footer-widget-social ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-widget-social ul li a{
+    display: inline-block;
+    font-size: 20px;
+    color: #ada8b6;
+    transition: all 0.3s ease;
+}
+.footer-widget-social ul li a:hover{
+    color: #0d6efd;
+    transform: translateX(10px);
+}
+.footer-widget-menu{}
+.footer-widget-menu ul {
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;   
+}
+.footer-widget-menu ul li {
+    margin-bottom: 15px;
+}
+.footer-widget-menu ul li a {
+    color: #ada8b6;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer-widget-menu ul li a:hover{
+    letter-spacing: 2px;
+    color: #0d6efd;
+}
+/* Footer Section Styling End */
 
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg mani-menu">
-        <div class="container">
-          <div class="logo-img">
-            <a class="navbar-brand" href="#">
-              <img class="w-25" src="https://i.ibb.co/CKQLG4h/logo.png" alt="">
-            </a>
-          </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item active1">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Page</a>
-
-                <!-- Dropdown Menu Section Start -->
-                <ul>
-                  <li><a href="#">404 Page Error</a></li>
-                </ul>
-                <!-- Dropdown Menu Section End -->
-                
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>              
-            </ul>
-            
-            <button class="default-btn" type="submit">Get It Now</button>
-
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero Section Start -->
-      <section class="hero" id="hero">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="hero-content">
-                <h2>Take your business to next lavel.</h2>
-                <p>With supporthing text below as a natural lead-in to additional content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores magnam asperiores, soluta numquam ipsum cum.</p>
-                <a href="#" class="default-btn">Discover More</a>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="hero-img">
-                <img src="img/hero-image.jpg" alt="">
-              </div>              
-            </div>
-          </div>          
-        </div>
-      </section>
-      <!-- Hero Section End -->
-
-      <!-- Service Section Start -->
-      <sectin class="services" id="services">
-        <div class="container">
-          <div class="row py-5">
-            <div class="col-lg-6">
-              <div class="services-content">
-                <h6>Core Features</h6>
-              <h1>Provide Awesome Service With Our Tools</h1>
-              <p class="pt-5">WIth supporting text below as a natural lead-in-to additional. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quisquam?</p>
-              </div>              
-            </div>
-            <div class="col-lg-6"></div>
-          </div>
-          <div class="row pb-5">            
-            <div class="col-lg-3">
-              <div class="card shadow-sm" style="width: 18rem; background: #f9fcff;">
-                <div class="card-body cardhover">
-                  <h5 class="card-title">Discover, Explore the Product</h5>
-                  <div class="services-icon">
-                    <i class="lni lni-microscope"></i>
-                  </div>                  
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                 
-                </div>
-                <div class="services-img">
-                  <img src="img/service-patern.png" alt="">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="card shadow-sm" style="width: 18rem; background: #f9fcff;">
-                <div class="card-body cardhover">
-                  <h5 class="card-title">Discover, Explore the Product</h5>
-                  <div class="services-icon">
-                    <i class="lni lni-ux"></i>
-                  </div>                  
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="card shadow-sm" style="width: 18rem; background: #f9fcff;">
-                <div class="card-body cardhover">
-                  <h5 class="card-title">Discover, Explore the Product</h5>
-                  <div class="services-icon">
-                    <i class="lni lni-graph"></i>
-                  </div>                  
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                  
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="card shadow-sm" style="width: 18rem; background: #f9fcff;">
-                <div class="card-body cardhover">
-                  <h5 class="card-title">Discover, Explore the Product</h5>
-                  <div class="services-icon">
-                    <i class="lni lni-blackboard"></i>
-                  </div>                  
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>                  
-                </div>
-              </div>
-            </div>             
-          </div>
-        </div>
-      </sectin>
-      <!-- Service Section End -->
-
-      <!-- Video Section Start -->
-      <section class="video my-5 d-flex justify-content-center" id="video">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-lg-6">
-              <div class="video-content text-center">
-                <h6>Create Your Own Experience</h6>
-                <h2>Ready To Grow Faster?</h2>
-                <p class="py-4">There are mony variations of Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quisquam qui eligendi, aliquid quos dolor!</p>
-                <a href="https://www.youtube.com/@freelancershahjalal" class="vicons">
-                  <i class="fa-solid fa-play"></i>
-                </a>                
-              </div>
-            </div>            
-            <div class="col-lg-3"></div>            
-          </div>
-        </div>
-      </section>
-      <!-- Video Section End -->
-
-      <!-- Pricing Table Section Start -->
-      <section class="pricing-table py-5" id="pricing-table">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="pricing-title text-center">
-                <h5>Pircing Table</h5>
-              <h2>Our Pricing Plan</h2>
-              <p class="my-4">There are many variations of Lorem Ipsum avaiable, but the majority have suffered alteraction in some form</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="pricing-table-items text-md-center">
-                <h5>Single Use</h5>
-                <h3>$10</h3>
-                <h6>Per Month</h6>
-                <ul>
-                  <li>Up to 5 users</li>
-                </ul>
-                <ul>
-                  <li>Basic support on Github</li>
-                </ul>
-                <ul>
-                  <li>Monthly updates</li>
-                </ul>
-                <ul>
-                  <li>Free Cancelation</li>
-                </ul>
-                <div class="pricing-item-button">
-                  <a class="btn" href="#">Star Free Trial</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="pricing-table-items text-md-center">
-                <h5>Single Use</h5>
-                <h3>$20</h3>
-                <h6>Per Month</h6>
-                <ul>
-                  <li>Up to 10 users</li>
-                </ul>
-                <ul>
-                  <li>Basic support on Github</li>
-                </ul>
-                <ul>
-                  <li>Monthly updates</li>
-                </ul>
-                <ul>
-                  <li>Free Cancelation</li>
-                </ul>
-                <div class="pricing-item-button">
-                  <a class="btn" href="#">Star Free Trial</a>
-                </div>
-              </div>              
-            </div>
-            <div class="col-lg-4">
-              <div class="pricing-table-items text-md-center">
-                <h5>Single Use</h5>
-                <h3>$30</h3>
-                <h6>Per Month</h6>
-                <ul>
-                  <li>Up to 20 users</li>
-                </ul>
-                <ul>
-                  <li>Basic support on Github</li>
-                </ul>
-                <ul>
-                  <li>Monthly updates</li>
-                </ul>
-                <ul>
-                  <li>Free Cancelation</li>
-                </ul>
-                <div class="pricing-item-button">
-                  <a class="btn" href="#">Star Free Trial</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Pricing Table Section End -->
-      
-      <!-- Purchase Section Start -->
-      <section class="purchase my-5" id="purchase">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="purchase-content">
-                <h6>Lfwf Free lite</h6>
-                <h2>Currently You Are Using Free Lite Version of Massive</h2>
-                <p>Please, purchase full version of the template to get all pages features and commercial license.</p>
-                <div class="purchase-content-button">
-                  <a class="btn" href="#">Purchase Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Purchase Section End -->
-
-      <!-- New Letter Section Start -->
-      <section class="news-letter py-5" id="news-letter">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <div class="newsletter-content  p-5">
-                <h3>Sign Up for Newsletter</h3>
-                <p>Sign Up and short using a free account <br> to see what it's about</p>
-                <form action="#">
-                  <input type="email" name="" id="" placeholder="Your email address" required>
-                  <button class="btn newsletterbtn" type="submit">Subcribe Now</button>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="card shadow-lg" style="width: 25rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Do you want to grow your online business with Massive?</h5>                  
-                  <a href="#" class="btn btn-primary newsletterbtn-2">Go Started</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- New Letter Section End -->
-
-      <!-- Our Testimonial Section Start -->
-      <section class="ourtestimonial" id="our-testimonial">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="clients-testimonial-left">
-                <h5>Our Awesome Clients</h5>
-              <h2>We Built Best Solutions For Your Company</h2>
-              <p>There are many variations of passages of loremipsum available, but the majority have suffered alteration in some form.</p>
-              </div>            
-            </div>
-
-            <div class="col-lg-8">
-              <div class="clients-testimonial-right">
-                <div class="clients-brand">
-                  <table>
-                    <tbody>
-
-                      <tr>
-                        <td>
-                          <img src="img/client1.png" alt="">
-                        </td>
-                        <td>
-                          <img src="img/client2.png" alt="">
-                        </td>
-                        <td>
-                          <img src="img/client3.png" alt="">
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <img src="img/client4.png" alt="">
-                        </td>
-                        <td>
-                          <img src="img/client5.png" alt="">
-                        </td>
-                        <td>
-                          <img src="img/client6.png" alt="">
-                        </td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-          </div>                    
-        </div>    
-      </section>
-      <!-- Our Testimonial Section End -->
-      
-      <!-- Blog Section Start -->
-      <section class="blog py-5" id="blog">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="blog-title text-center py-5">
-                <h5>Latest News</h5>
-                <h2>Latest News & Blogs</h2>
-                <p>There are many variations of passages of loremipsum available, but the majority have suffered alteration in some form.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card blog-card">
-                <img src="img/blog-grid1.jpg" class="card-img-top rounded" alt="...">
-                <div class="pop-up animate__animated animate__bounce">
-                  <img src="img/author.jpg" alt="">
-                  <span>By Tim Norton</span>
-                </div>
-                <div class="card-body card-content">
-                  <h5 class="card-title py-3">Make your team a Design driven company</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolom magnam voluptas modi, dicta repellat conseqntur. Iure, ducimus ipsame napare?</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="card blog-card">
-                <img src="img/blog-grid2.jpg" class="card-img-top rounded" alt="...">
-                <div class="pop-up animate__animated animate__bounce">
-                  <img src="img/author.jpg" alt="">
-                  <span>By Tim Norton</span>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title py-3">The newest web framework that changed the world</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolom magnam voluptas modi, dicta repellat conseqntur. Iure, ducimus ipsame napare?</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4">
-              <div class="card blog-card">
-                <img src="img/blog-grid3.jpg" class="card-img-top rounded" alt="...">
-                <div class="pop-up animate__animated animate__bounce">
-                  <img src="img/author.jpg" alt="">
-                  <span>By Tim Norton</span>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title py-3">5 ways to improve user retention for your startup</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolom magnam voluptas modi, dicta repellat conseqntur. Iure, ducimus ipsame napare?</p>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-      <!-- Blog Section End -->
-
-      <!-- Footer Section Start -->
-      <section class="footer" id="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="footer-widget">
-                <img src="img/lfwfacademy-logo-1.png" alt="">
-                <p>Start building your creative website with our awesome template Massive.</p>
-                <div class="footer-widget-social">
-                  <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                  </ul>
-                </div>
-              </div>             
-            </div>
-
-            <div class="col-lg-3">
-              <div class="footer-widget">
-                <h3>Pages</h3>
-                <div class="footer-widget-menu">
-                  <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Our Blog</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3">
-              <div class="footer-widget">
-                <h3>More Links</h3>
-                <div class="footer-widget-menu">
-                  <ul>
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">License</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3">
-              <div class="footer-widget">
-                <h3>Support</h3>
-                <div class="footer-widget-menu">
-                  <ul>
-                    <li><a href="#">Cookies</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Support Team</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>      
-      <!-- Footer Section End -->
-
-      <!-- Footer Copy Right Area Section Start -->
-      <section class="footer-copy-right-area" id="footer-copy-right-area">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copy-right-content">
-                <p>Designed and Developed by LFWF Academy</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Footer Copy Right Area Section End -->
-
-
-    <!-- JS Link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+/* Footer Copy Right Area Section Styling Start */
+.footer-copy-right-area{
+    background: #081828;
+    color: #fff;
+}
+.copy-right-content {
+    border-top: 1px solid #ada8b6;
+}
+.copy-right-content p {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 30px;
+    color: #ada8b6;
+}
+/* Footer Copy Right Area Section Styling End */
